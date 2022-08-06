@@ -27,10 +27,26 @@
         cursor: pointer;
     }
 
+    @media screen and (orientation: portrait) {
+        html {
+            /* Rotate the content container */
+            transform: rotate(-90deg);
+            transform-origin: left top;
+            /* Set content width to viewport height */
+            width: 100vh;
+            /* Set content height to viewport width */
+            height: 100vw;
+            overflow-x: hidden;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+    }
+
     #video-bg {
         position: fixed;
-        right: -145px;
-        bottom: 0;
+        left: 0;
+        top: 0;
         min-width: 100%;
         min-height: 100%;
         z-index: -1;
@@ -78,7 +94,7 @@
         font-family: gifont;
         text-align: left;
         color: #fff;
-        padding: 10px 20px;
+        padding: 16px 20px;
     }
 
     .c2 {
@@ -107,14 +123,34 @@
 
     .c3 {
         width: 30%;
-        padding: 120px 40px;
+        padding: 120px 20px 20px 40px;
         color: #fff;
-        font-size: 1.15em;
+        font-size: 1.2em;
     }
 
     .c3 #vl-content {
         overflow: auto;
-        max-height: 90%;
+        max-height: 95%;
+        min-height: 95%;
+    }
+
+    .credits {
+        bottom: 0;
+        color: #fff;
+        vertical-align: bottom;
+        font-size: 0.6em;
+        text-align: end;
+    }
+
+    a {
+        color: #ddd;
+        transition: 0.5s;
+    }
+    a:hover {
+        color: #fff;
+    }
+    a:visited {
+        color: #ddd;
     }
 
 </style>
@@ -254,7 +290,15 @@
             <button onclick="changeCharacter('next')">></button>
         </div>
 
-        <div class="c3"><div id="vl-content"></div></div>
+        <div class="c3">
+
+            <div id="vl-content"></div>
+
+            <div class="credits">
+                <div><a target=_blank href="https://genshin.hoyoverse.com/en/">Genshin Impact</a> (c) <a target=_blank href="https://www.hoyoverse.com/en-us/">Hoyoverse</a></div>
+                <div>Background Video from <a target=_blank href="https://genshin.honeyhunterworld.com/?lang=EN">Honey Impact</a></div>
+            </div>
+        </div>
     </div>
 
 </body>
