@@ -1,0 +1,137 @@
+@font-face {
+    font-family: gifont;
+    src: url(zh-cn.ttf);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    font-family: gifont;
+    height: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+#video-bg {
+    position: fixed;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+}
+
+.c1 {
+    width: 30%;
+    padding: 40px 20px;
+}
+
+.c1 .subtitle {
+    color: rgb(205,178,130);
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.c1 #vl-list {
+    overflow: auto;
+    max-height: 90%;
+}
+
+.c1 #vl-list .vl-title-outer {
+    background-color: rgba(0,0,0,0.2);
+    padding: 2px;
+    margin-bottom: 4px;
+    transition: 0.5s;
+}
+
+.c1 #vl-list .vl-title-outer:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.c1 #vl-list .vl-title-inner {
+    background-color: rgba(0,0,0,0.2);
+    width: 100%;
+    border: solid 2px rgb(255 255 255 / 30%);
+    font-size: 1.2em;
+    font-family: gifont;
+    text-align: left;
+    color: #fff;
+    padding: 16px 20px;
+}
+
+.c2 {
+    display: flex;
+    width: 40%;
+}
+
+.c2 button {
+    background-color: rgba(0,0,0,0.2);
+    border: none;
+    height: fit-content;
+    margin: auto;
+    color: #fff;
+    font-family: 'gifont';
+    padding: 20px 15px;
+    transition: 0.5s;
+}
+
+.c2 button:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.c2 #char-img {
+    width: 100%;
+}
+
+.c3 {
+    width: 30%;
+    padding: 90px 20px 20px 40px;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.c3 #vl-title {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+
+.c3 #vl-content {
+    overflow: auto;
+    max-height: 90%;
+    min-height: 90%;
+}
+
+.credits {
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    vertical-align: bottom;
+    font-size: 0.6em;
+    text-align: end;
+    position: fixed;
+}
+
+a {
+    color: #ddd;
+    transition: 0.5s;
+}
+a:hover {
+    color: #fff;
+}
+a:visited {
+    color: #ddd;
+}

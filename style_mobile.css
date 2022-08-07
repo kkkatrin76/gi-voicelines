@@ -1,0 +1,27 @@
+@media screen and (orientation: landscape) {
+    html {
+        font-size: 0.7em;
+    }
+
+    #video-bg {
+        left: -198px;
+    }
+
+    .c1 {
+        padding: 20px 10px;
+        max-height: 86%;
+    }
+
+    .c1 .subtitle {
+        margin-bottom: 15px;
+    }
+
+    .c1 #vl-list .vl-title-inner {
+        padding: 8px 10px;
+    }
+
+    .c3 {
+        padding: 20px 20px 40px 40px;
+        font-size: 1.1em;
+    }
+}
