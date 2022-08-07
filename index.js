@@ -1,4 +1,4 @@
-var version = 1.4;
+var version = 1.1;
 var chars = [];
 var char = null;
 var vlTitle = "";
@@ -178,7 +178,7 @@ var supportsOrientationChange = "onorientationchange" in window,
     orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
 
 window.addEventListener(orientationEvent, function() {
-    alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
+    // alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
     if (window.orientation === 0 || window.orientation === 180) {
         if (!warned) {
             alertOrientation();
