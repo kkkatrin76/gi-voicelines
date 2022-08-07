@@ -1,4 +1,4 @@
-var version = 1.1;
+var version = 1.2;
 var chars = [];
 var char = null;
 var vlTitle = "";
@@ -14,12 +14,18 @@ function getName() {
     name = localStorage.getItem("name");
     if (!name || name == undefined || name === "null") {
         name = prompt("Please enter your name", "[name]");
+        if (!name || name == undefined || name === "null") {
+            name = "[name]";
+        }
         localStorage.setItem("name", name);
     }
 
     deityName = localStorage.getItem("deityName");
     if (!deityName || deityName == undefined || deityName === "null") {
         deityName = prompt("Please enter your deity name", "[deityName]");
+        if (!deityName || deityName == undefined || deityName === "null") {
+            deityName = "[deityName]";
+        }
         localStorage.setItem("deityName", deityName);
     }
 
