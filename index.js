@@ -162,3 +162,19 @@ function constructVoicelineContent() {
     document.getElementById('vl-title').innerHTML = vlTitle;
     document.getElementById('vl-content').innerHTML = vlContent;
 }
+
+// Detect whether device supports orientationchange event, otherwise fall back to
+// the resize event.
+var warned = false;
+var supportsOrientationChange = "onorientationchange" in window,
+    orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+
+window.addEventListener(orientationEvent, function() {
+    // alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
+    if (window.orientation === 0 || window.orientation === 180) {
+        if (!warned) {
+            alert("Attention! Page best viewed in landscape orientation.")
+            warned = true;
+        }
+    }
+}, false);

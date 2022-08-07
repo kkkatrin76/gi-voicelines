@@ -1,4 +1,4 @@
-@media screen and (orientation: landscape) {
+@media only screen and (max-width: 600px), (orientation: landscape) (pointer:none), (pointer:coarse) {
     html {
         font-size: 0.7em;
     }
@@ -23,5 +23,9 @@
     .c3 {
         padding: 20px 20px 40px 40px;
         font-size: 1.1em;
+    }
+
+    .credits {
+        font-size: 0.5em;
     }
 }
