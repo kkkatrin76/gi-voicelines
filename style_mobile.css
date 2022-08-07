@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px), (orientation: landscape) (pointer:none), (pointer:coarse) {
+@media only screen and (max-width: 800px), (orientation: landscape) (pointer:none), (pointer:coarse) {
     html {
         font-size: 0.7em;
     }
