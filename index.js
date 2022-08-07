@@ -1,4 +1,4 @@
-var version = 1.0;
+var version = 1.1;
 var chars = [];
 var char = null;
 var vlTitle = "";
@@ -187,6 +187,6 @@ window.addEventListener(orientationEvent, function() {
 }, false);
 
 function alertOrientation() {
-    alert("Attention! Page best viewed in landscape orientation.")
+    alert("Attention! Page best viewed in landscape orientation and optimized for PC screens.")
     warned = true;
 }
