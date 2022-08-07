@@ -103,20 +103,21 @@ button {
 
 .c3 {
     width: 30%;
-    padding: 90px 20px 20px 40px;
+    padding: 70px 20px 60px 40px;
     color: #fff;
     font-size: 1.2em;
 }
 
 .c3 #vl-title {
     font-size: 1.25em;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .c3 #vl-content {
     overflow: auto;
     max-height: 90%;
     min-height: 90%;
+    line-height: 1.4;
 }
 
 .credits {
