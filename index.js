@@ -1,4 +1,4 @@
-var version = 1.6;
+var version = 1.1;
 var chars = [];
 var char = null;
 var vlTitle = "";
@@ -187,6 +187,6 @@ window.addEventListener(orientationEvent, function() {
 }, false);
 
 function alertOrientation() {
-    alert("Attention! Page best viewed in landscape orientation and optimized for PC 2560 × 1600, iPhone 13 Pro, and iPad Mini 6 screens.")
+    alert("Attention! Page best viewed in landscape orientation and optimized for PC 2560 × 1600 and iPhone 13 Pro screens.")
     warned = true;
 }

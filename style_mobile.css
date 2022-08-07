@@ -1,10 +1,10 @@
-@media screen and (max-device-width: 800px), (orientation: landscape), (pointer:none), (pointer:coarse) {
+@media only screen and (max-width: 600px), (orientation: landscape) (pointer:none), (pointer:coarse) {
     html {
         font-size: 0.7em;
     }
 
     #video-bg {
-        left: 0;
+        left: -22%;
     }
 
     .c1 {
@@ -33,11 +33,5 @@
         font-size: 0.1em;
         left: 5px;
         bottom: 5px;
-    }
-}
-
-@media screen and (max-device-width: 600px), (orientation: landscape), (pointer:none), (pointer:coarse) {
-    #video-bg {
-        left: -22%;
     }
 }
