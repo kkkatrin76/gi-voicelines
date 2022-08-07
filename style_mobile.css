@@ -21,7 +21,7 @@
     }
 
     .c3 {
-        padding: 20px 20px 40px 40px;
+        padding: 20px 20px 50px 40px;
         font-size: 1.1em;
     }
 
@@ -31,5 +31,7 @@
 
     #version {
         font-size: 0.1em;
+        left: 5px;
+        bottom: 5px;
     }
 }
