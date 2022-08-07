@@ -1,4 +1,4 @@
-var version = 1.2;
+var version = 1.3;
 var chars = [];
 var char = null;
 var vlTitle = "";
@@ -134,7 +134,7 @@ function changeVideoSource(bg) {
     source.setAttribute('type', 'video/mp4');
 
     video.load();
-    video.play();
+    // video.play();
 
     vlTitle = "";
     vlContent = "";

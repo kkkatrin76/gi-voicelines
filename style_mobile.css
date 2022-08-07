@@ -4,7 +4,8 @@
     }
 
     #video-bg {
-        left: -198px;
+        /* left: -198px; */
+        left: -30%;
     }
 
     .c1 {
