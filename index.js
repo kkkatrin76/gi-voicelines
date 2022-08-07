@@ -1,4 +1,4 @@
-var version = 1.3;
+var version = 1.4;
 var chars = [];
 var char = null;
 var vlTitle = "";
