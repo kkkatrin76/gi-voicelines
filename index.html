@@ -9,7 +9,7 @@
 
 <script src="index.js"></script>
 
-<body onLoad="getName()">
+<body onLoad="getName(); appendVersion()">
 
     <video autoplay muted loop id="video-bg">
         <source id="video-src" src="zhongli.mp4" type="video/mp4">
@@ -33,6 +33,7 @@
             <div id="vl-content"></div>
 
             <div class="credits">
+                <div id="version"></div>
                 <div><a target=_blank href="https://genshin.hoyoverse.com/en/">Genshin Impact</a> (c) <a target=_blank href="https://www.hoyoverse.com/en-us/">Hoyoverse</a></div>
                 <div>Background Video from <a target=_blank href="https://genshin.honeyhunterworld.com/?lang=EN">Honey Impact</a></div>
             </div>

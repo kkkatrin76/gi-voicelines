@@ -1,3 +1,4 @@
+var version = 1.1;
 var chars = [];
 var char = null;
 var vlTitle = "";
@@ -161,6 +162,10 @@ function constructVoicelineContent() {
     vlContent = vlContent.replace(/\n/g, "<br>");
     document.getElementById('vl-title').innerHTML = vlTitle;
     document.getElementById('vl-content').innerHTML = vlContent;
+}
+
+function appendVersion() {
+    document.getElementById('version').innerHTML = "v" + version;
 }
 
 // Detect whether device supports orientationchange event, otherwise fall back to
