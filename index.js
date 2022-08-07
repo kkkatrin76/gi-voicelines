@@ -6,6 +6,10 @@ var vlContent = "";
 var name = "[name]";
 var deityName = "[deityName]";
 
+function appendVersion() {
+    document.getElementById('version').innerHTML = "v" + version;
+}
+
 function getName() {
     name = localStorage.getItem("name");
     if (!name || name == undefined || name === "null") {
@@ -17,6 +21,10 @@ function getName() {
     if (!deityName || deityName == undefined || deityName === "null") {
         deityName = prompt("Please enter your deity name", "[deityName]");
         localStorage.setItem("deityName", deityName);
+    }
+
+    if(window.innerHeight > window.innerWidth) {
+        alertOrientation();
     }
 
     initChars();
@@ -164,12 +172,7 @@ function constructVoicelineContent() {
     document.getElementById('vl-content').innerHTML = vlContent;
 }
 
-function appendVersion() {
-    document.getElementById('version').innerHTML = "v" + version;
-}
-
-// Detect whether device supports orientationchange event, otherwise fall back to
-// the resize event.
+// Mobile device alert
 var warned = false;
 var supportsOrientationChange = "onorientationchange" in window,
     orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
@@ -178,8 +181,12 @@ window.addEventListener(orientationEvent, function() {
     // alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
     if (window.orientation === 0 || window.orientation === 180) {
         if (!warned) {
-            alert("Attention! Page best viewed in landscape orientation.")
-            warned = true;
+            alertOrientation();
         }
     }
 }, false);
+
+function alertOrientation() {
+    alert("Attention! Page best viewed in landscape orientation.")
+    warned = true;
+}
