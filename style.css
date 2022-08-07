@@ -13,6 +13,8 @@ body {
     transition: 0.3s;
     font-family: gifont;
     height: 100%;
+    position: absolute;
+    width: 100vw;
 }
 
 button {
