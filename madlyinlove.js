@@ -4,7 +4,6 @@ var char = null;
 var vlTitle = "";
 var vlContent = "";
 var name = "[name]";
-var deityName = "[deityName]";
 
 function appendVersion() {
     document.getElementById('version').innerHTML = "v" + version;
@@ -18,15 +17,6 @@ function getName() {
             name = "[name]";
         }
         localStorage.setItem("name", name);
-    }
-
-    deityName = localStorage.getItem("deityName");
-    if (!deityName || deityName == undefined || deityName === "null") {
-        deityName = prompt("Please enter your deity name", "[deityName]");
-        if (!deityName || deityName == undefined || deityName === "null") {
-            deityName = "[deityName]";
-        }
-        localStorage.setItem("deityName", deityName);
     }
 
     if(window.innerHeight > window.innerWidth) {
