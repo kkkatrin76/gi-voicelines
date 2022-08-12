@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>GOW!Reader Voicelines</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link rel="stylesheet" href="gowreader.css">
+<link rel="stylesheet" href="gowreader_mobile.css">
+
+<script src="madlyinlove.js"></script>
+
+<body onLoad="getName(); appendVersion()">
+
+    <video autoplay playsinline muted loop id="video-bg">
+        <source id="video-src" src="" type="video/mp4">
+    </video>
+
+    <div id="main" class="main">
+        <div class="c1">
+            <div class="subtitle">Profile / Voice-Over / <span id="char-name">Kazuha</span></div>
+            <div id="vl-list"></div>
+        </div>
+
+        <div class="c2">
+            <button onclick="changeCharacter('prev')"><</button>
+            <div id="char-img"></div>
+            <button onclick="changeCharacter('next')">></button>
+        </div>
+
+        <div class="c3">
+
+            <div id="vl-title"></div>
+            <div id="vl-content"></div>
+
+            <div class="credits">
+                <div><a target=_blank href="https://genshin.hoyoverse.com/en/">Genshin Impact</a> (c) <a target=_blank href="https://www.hoyoverse.com/en-us/">Hoyoverse</a></div>
+                <div>Background Video from <a target=_blank href="https://genshin.honeyhunterworld.com/?lang=EN">Honey Impact</a> | <a href="https://www.youtube.com/watch?v=psDhNyBEyxI">YeaChan</a></div>
+            </div>
+        </div>
+
+        <div id="version"></div>
+    </div>
+
+</body>
+</html>
