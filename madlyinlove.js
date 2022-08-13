@@ -3,7 +3,7 @@ var chars = [];
 var char = null;
 var vlTitle = "";
 var vlContent = "";
-var name = "[name]";
+var name = "${name}";
 
 function appendVersion() {
     document.getElementById('version').innerHTML = "v" + version;
@@ -12,9 +12,9 @@ function appendVersion() {
 function getName() {
     name = localStorage.getItem("name");
     if (!name || name == undefined || name === "null") {
-        name = prompt("Please enter your name", "[name]");
+        name = prompt("Please enter your name", "${name}");
         if (!name || name == undefined || name === "null") {
-            name = "[name]";
+            name = "${name}";
         }
         localStorage.setItem("name", name);
     }
@@ -39,7 +39,7 @@ function initChars() {
             "title": `Your Relationship`,
             "content": `The protector and the protected would be the best description, I suppose. I try to be the best shelter that I could ever become for the tired dove that they are. A safe space to return to, someone to call home.
 
-            ... Or at least, this is what I wish to become. My sweet [name] tells me that my protection suffocates them sometimes, but in this ruthless world where the gods will not hesitate to strike their subjects down, can you truly fault someone's desire to protect what is most important to them?`
+            ... Or at least, this is what I wish to become. My sweet ${name} tells me that my protection suffocates them sometimes, but in this ruthless world where the gods will not hesitate to strike their subjects down, can you truly fault someone's desire to protect what is most important to them?`
         }, {
             "title": `Competitors`,
             "content": `If there is anything I've learned from my life of wandering, it's that obstacles will always present themselves in one's journey. And to move forward, we must eradicate them, lest they ambush us in the future. Don't you agree?`
@@ -51,14 +51,14 @@ function initChars() {
         }],
         "tartaglia": [{
             "title": `About ${name}`,
-            "content": `Mm? Yes, what about my darling [name]?
+            "content": `Mm? Yes, what about my darling ${name}?
 
             Tread carefully now, comrade~ *chuckle*`
         }, {
             "title": `Your Relationship`,
             "content": `Utterly head over heels, madly invested in each other, completely in love, and is in a loving relationship! Ahaha, don't give me that look! You were the one who asked!
 
-            Alright, alright, since you asked nicely... [name] has been with me for as long as I remember, actually. We were neighbors, and we kept in touch even after I joined the Fatui. They stuck by me through thick and thin, always smiling when they greeted me back at the village, despite knowing what I do for a living...
+            Alright, alright, since you asked nicely... ${name} has been with me for as long as I remember, actually. We were neighbors, and we kept in touch even after I joined the Fatui. They stuck by me through thick and thin, always smiling when they greeted me back at the village, despite knowing what I do for a living...
 
             Tell me, how can one not fall in love with someone like that? Such a pure, untainted soul... Being around them feels like I've committed an unforgivable sin in itself, but alas, I've been utterly smitten and I can't exactly remember how to get out of this maze called love anymore. So I guess I'm staying for good, haha!`
         }, {
@@ -74,14 +74,14 @@ function initChars() {
         }],
         "ayato": [{
             "title": `About ${name}`,
-            "content": `[name]? Yes, of course I know them. What do you think about them, Traveler?
+            "content": `${name}? Yes, of course I know them. What do you think about them, Traveler?
 
             Oh? My smile looks scary? I'm not sure what you mean by that, this is my usual smile. *chuckles* Why, have you done something that will potentially incur my wrath? Something like... taking a romantic interest towards my dear fiancé, perhaps?
 
             That's not the case? Well, then, I believe there's nothing you should worry about!`
         }, {
             "title": `Your Relationship`,
-            "content": `[name] has stayed with me throughout my darkest hours. They... gave me much-needed comfort, when I had to take the mantle of the head of the clan. Though it is something I have prepared for my whole life, it was a rather sudden change, and the transition was abrupt. Coupled with the fact that there was no room for mistakes... Yes, I could never thank them enough.
+            "content": `${name} has stayed with me throughout my darkest hours. They... gave me much-needed comfort, when I had to take the mantle of the head of the clan. Though it is something I have prepared for my whole life, it was a rather sudden change, and the transition was abrupt. Coupled with the fact that there was no room for mistakes... Yes, I could never thank them enough.
 
             I believe we've developed a deep bond because of it all. So, it's only natural that I repay them by providing them with the best luxuries and the safest shelter to call home. And as the spouse of the head of the Kamisato clan, they won't ever lack anything!`
         }, {
@@ -93,13 +93,13 @@ function initChars() {
             "title": `Would you ever let go?`,
             "content": `My, I'm afraid I'll need context on this one. If this is about my position as the head of my household clan, I would rather not, but I believe Ayaka will become a fine head in my place. If you're talking about the Shuumatsuban, it will undoubtedly cause a few issues. Still, I should manage to hire some elite private mercenaries in their stead, though it would not be preferable.
 
-            And if this is concerning [name], then the answer is rather simple:
+            And if this is concerning ${name}, then the answer is rather simple:
 
             No.`
         }],
         "zhongli": [{
             "title": `About ${name}`,
-            "content": `*smiles* [name] is my greatest treasure. I'm quite sure you've noticed the fondness I hold towards them. I can talk about them all day.
+            "content": `*smiles* ${name} is my greatest treasure. I'm quite sure you've noticed the fondness I hold towards them. I can talk about them all day.
 
             They are a kind one, for starters. always wishing and striving to please everyone, sometimes to the point that they forgot about themselves. No matter in whichever lives, no matter their position... This aspect of them never changed. It worries me so. Yet, forcibly stripping this away from them would mean that I am rejecting who they are as a person. And that is not what I wish to do.
 
@@ -116,13 +116,13 @@ function initChars() {
             We would not want the seas of Liyue Harbor to turn red from all the blood. It would be unhygienic.`
         }, {
             "title": `Would you ever let go?`,
-            "content": `..... All I wish for is for [name] to be safe.
+            "content": `..... All I wish for is for ${name} to be safe.
 
             And the safest place in all Teyvat is by my side.`
         }],
         "thoma": [{
             "title": `About ${name}`,
-            "content": `Oh, did you meet [name]? I suppose you've been frequenting the Kamisato residence lately... What did you think about them?
+            "content": `Oh, did you meet ${name}? I suppose you've been frequenting the Kamisato residence lately... What did you think about them?
 
             Hmm, I see, I see! The young miss introduced the two of you! <span style="font-size: 0.8em">... That's fine then.</span>
 
@@ -131,15 +131,15 @@ function initChars() {
             "title": `Your Relationship`,
             "content": `"The perfect couple"? R-Really? Do people really say that? Aw, geez, that's kinda embarrassing, but it makes me happy that people recognize how well we get along with each other, haha!
 
-            [name] could be a little stubborn sometimes, but they're just the sweetest! *giggle* Oh, and don't worry, when we get married one day, I'll be sure to invite you as one of the guests!`
+            ${name} could be a little stubborn sometimes, but they're just the sweetest! *giggle* Oh, and don't worry, when we get married one day, I'll be sure to invite you as one of the guests!`
         }, {
             "title": `Competitors`,
             "content": `*strained laugh* Uhm, well, I can't deny that there are a lot of people around us, and with me being busy tending to the Kamisato siblings' needs, there isn't enough time for me to regularly check on them...
 
-            B-But, the young master has been really kind, so I really have nothing to worry about! Huh? What kind of help did he provide? Well, there are numerous things, really. For example... He's provided me with an adequate living section in the Kamisato residence, since I'm the young miss' retainer, and he allowed [name] to reside there! Just normal things, you know? Man, I sure am glad I work for a really accommodating boss!`
+            B-But, the young master has been really kind, so I really have nothing to worry about! Huh? What kind of help did he provide? Well, there are numerous things, really. For example... He's provided me with an adequate living section in the Kamisato residence, since I'm the young miss' retainer, and he allowed ${name} to reside there! Just normal things, you know? Man, I sure am glad I work for a really accommodating boss!`
         }, {
             "title": `Would you ever let go?`,
-            "content": `You know, my mom used to say, if you truly love someone, you should always keep them close to your heart... And I agree wholeheartedly with her! Plus, [name] enjoys my company very much, why would I <i>'let them go'</i>?`
+            "content": `You know, my mom used to say, if you truly love someone, you should always keep them close to your heart... And I agree wholeheartedly with her! Plus, ${name} enjoys my company very much, why would I <i>'let them go'</i>?`
         }]
     }
 
