@@ -3,7 +3,7 @@ var chars = [];
 var char = null;
 var vlTitle = "";
 var vlContent = "";
-var name = "${name}";
+var name = "[name]";
 
 function appendVersion() {
     document.getElementById('version').innerHTML = "v" + version;
