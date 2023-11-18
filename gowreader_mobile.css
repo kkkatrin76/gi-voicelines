@@ -30,6 +30,11 @@
         margin-bottom: 18px;
     }
 
+    .c3 #vl-content {
+        max-height: 80%;
+        min-height: 80%;
+    }
+
     .credits {
         font-size: 0.4em;
     }
